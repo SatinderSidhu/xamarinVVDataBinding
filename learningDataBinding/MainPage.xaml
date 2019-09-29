@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:d="http://xamarin.com/schemas/2014/forms/design" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" mc:Ignorable="d" x:Class="learningDataBinding.MainPage">
+
+    <Frame BorderColor="Blue" Padding="10" Margin="20" >
+    <StackLayout Padding="20" BackgroundColor="Yellow" VerticalOptions="Center">
+        <!-- Place new controls here -->
+        <BoxView x:Name="targetBox"
+                 BindingContext="{x:Reference Name=sourceSlider}"
+                 
+                 BackgroundColor="Blue"
+                 HeightRequest="{Binding Path=Value}"></BoxView>
+
+        <Label
+            BindingContext="}"
+            Text="{Binding
+            Source={x:Reference Name=sourceSlider},
+            Path=Value}"
+               ></Label>
+        <Slider x:Name="sourceSlider" Maximum="500"></Slider>
+
+    </StackLayout>
+
+        </Frame>
+</ContentPage>
